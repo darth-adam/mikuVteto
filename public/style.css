@@ -1,0 +1,26 @@
+/* style.css - multiplayer project */
+:root{--bg:#071323;--card:rgba(255,255,255,0.03);--accent:#7dd3fc;--muted:#9aa4b2}
+*{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,Roboto,Arial;background:linear-gradient(180deg,#03101a,#071323);color:#fff}
+.wrap{max-width:1100px;margin:24px auto;padding:18px}
+.card{background:var(--card);padding:14px;border-radius:10px;margin-bottom:12px}
+.btn{padding:8px 12px;border-radius:8px;background:var(--accent);color:#012;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.row{display:flex;gap:8px;align-items:center}
+.col{margin-bottom:8px}
+.muted{color:var(--muted)}
+.battle{display:flex;gap:12px;align-items:stretch}
+.fighter-col{width:220px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.avatar{width:160px;height:160px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center}
+.name{font-weight:800}
+.hp-wrap{width:86%;height:12px;background:rgba(255,255,255,0.03);border-radius:10px;overflow:hidden}
+.hp-bar{height:100%;width:100%;background:linear-gradient(90deg,var(--accent),#60a5fa);transition:width 240ms linear}
+.arena{flex:1;display:flex;flex-direction:column;align-items:center}
+.game-area{height:340px;position:relative;width:100%;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);overflow:hidden}
+.lane{position:absolute;left:50%;width:360px;transform:translateX(-50%);height:100%;display:flex;justify-content:space-between;padding:28px;z-index:5}
+.lane-col{width:84px;height:100%;border-radius:10px;background:rgba(255,255,255,0.01);display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px;cursor:pointer}
+.hit-zone{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);width:360px;height:16px;border-radius:8px;border:2px dashed rgba(255,255,255,0.06);z-index:10}
+.note{position:absolute;width:64px;height:22px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#012;pointer-events:none;z-index:8}
+.note.miku{background:linear-gradient(90deg,#7dd3fc,#60a5fa)}
+.note.teto{background:linear-gradient(90deg,#fda4af,#fda4a4)}
+.leader{font-size:13px;color:var(--muted)}
+@media(max-width:920px){.battle{flex-direction:column}.fighter-col{width:100%}}
